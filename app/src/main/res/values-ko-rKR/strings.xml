@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BMI 측정기</string>
+    <string name="height">키</string>
+    <string name="weight">몸무게</string>
+    <string name="result">결과</string>
+    <string name="result_TextView">결과가 보여집니다</string>
+    <string name="extremely_obese">고도비만</string>
+    <string name="obesity_level_2">2단계 비만</string>
+    <string name="obesity_level_1">3단계 비만</string>
+    <string name="overweight">과체중</string>
+    <string name="Normal">정상 체중</string>
+    <string name="underweight">저체중</string>
+</resources>
