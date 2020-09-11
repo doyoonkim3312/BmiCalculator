@@ -11,4 +11,7 @@
     <string name="overweight">과체중</string>
     <string name="Normal">정상 체중</string>
     <string name="underweight">저체중</string>
+    <string name="save_result">결과 저장하기</string>
+    <string name="bmi_result_save_positive">결과가 성공적으로 저장되었습니다.</string>
+    <string name="go_to_list">결과 목록 보기</string>
 </resources>

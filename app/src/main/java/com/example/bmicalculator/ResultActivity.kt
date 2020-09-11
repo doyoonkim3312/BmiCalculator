@@ -2,11 +2,20 @@ package com.example.bmicalculator
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import io.realm.Realm
+import io.realm.kotlin.createObject
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_result.*
+import org.jetbrains.anko.alert
+import org.jetbrains.anko.okButton
 import org.jetbrains.anko.toast
+import java.util.*
 
 
 class ResultActivity : AppCompatActivity() {
+    val realm = Realm.getDefaultInstance() // get Realm insatnce
+    val calendar = Calendar.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result)
@@ -52,5 +61,33 @@ class ResultActivity : AppCompatActivity() {
         //Displaying Toast Message using Anko Library
         toast(String.format("%.2f", bmi)) //Double value casting
 
+        resultSaveBtn.setOnClickListener {
+            realm.beginTransaction()
+
+            val newItem = realm.createObject<ResultRealm>(getNextId())
+            // realm.createObject<"RealmObjectName">(Primarykey)
+            newItem.bmiResult = resultTextView.text.toString()
+            newItem.bmiLevel = bmi
+            newItem.date = calendar.timeInMillis
+
+            realm.commitTransaction()
+
+            alert (getString(R.string.bmi_result_save_positive)){
+                okButton { finish() }
+            }.show()
+        }
+    }
+
+    private fun getNextId() : Int {
+        val currentMaxId = realm.where<ResultRealm>().max("id")
+        if (currentMaxId != null) {
+            return currentMaxId.toInt() + 1
+        }
+        return 0
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        realm.close()
     }
 }

@@ -31,7 +31,10 @@ class MainActivity : AppCompatActivity() {
                 "weight" to weightEditTextBox.text.toString(),
                 "height" to heightEditTextBox.text.toString()
             )
+        }
 
+        goToListBtn.setOnClickListener {
+            startActivity<ResultSaveView>()
         }
     }
 

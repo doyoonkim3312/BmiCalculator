@@ -10,4 +10,7 @@
     <string name="overweight">Overweight</string>
     <string name="Normal">Normal</string>
     <string name="underweight">Underweight</string>
+    <string name="save_result">Save BMI Result</string>
+    <string name="bmi_result_save_positive">New BMI result has successfully saved</string>
+    <string name="go_to_list">Go to result history</string>
 </resources>
