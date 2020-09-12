@@ -10,11 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultSaveView"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".HistoryEdit"></activity>
+        <activity
+            android:name=".ResultSaveView"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".ResultActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

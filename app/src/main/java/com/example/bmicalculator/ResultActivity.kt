@@ -13,7 +13,7 @@ import java.util.*
 
 
 class ResultActivity : AppCompatActivity() {
-    val realm = Realm.getDefaultInstance() // get Realm insatnce
+    val realm = Realm.getDefaultInstance() // get Realm instance
     val calendar = Calendar.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,6 +69,8 @@ class ResultActivity : AppCompatActivity() {
             newItem.bmiResult = resultTextView.text.toString()
             newItem.bmiLevel = bmi
             newItem.date = calendar.timeInMillis
+            //newItem.dataHeight = height
+            //newItem.dataWeight = weight
 
             realm.commitTransaction()
 
@@ -80,6 +82,7 @@ class ResultActivity : AppCompatActivity() {
 
     private fun getNextId() : Int {
         val currentMaxId = realm.where<ResultRealm>().max("id")
+        println("CurrentMaxId: $currentMaxId")
         if (currentMaxId != null) {
             return currentMaxId.toInt() + 1
         }
