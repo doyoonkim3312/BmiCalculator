@@ -10,13 +10,14 @@ import org.jetbrains.anko.startActivity
 
 class ResultSaveView : AppCompatActivity() {
     val realm = Realm.getDefaultInstance() //get realm instance
+    val context = this //Set context at this activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_result_save_view)
 
         val currentItems = realm.where<ResultRealm>().findAll()!!
-        val adapter = MainAdapter(currentItems)
+        val adapter = MainAdapter(currentItems, context) //for onCLickListener
 
         resultRecyclerView.adapter = adapter
 

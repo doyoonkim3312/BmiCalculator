@@ -13,4 +13,12 @@
     <string name="save_result">Save BMI Result</string>
     <string name="bmi_result_save_positive">New BMI result has successfully saved</string>
     <string name="go_to_list">Go to result history</string>
+    <string name="result_summary">Result Summary</string>
+    <string name="result_tag">BMI Test Result</string>
+    <string name="result_test_date">Test Date</string>
+    <string name="delete_result">Delete Result</string>
+    <string name="bmi_levle_history">BMI level</string>
+    <string name="delete_result_sure">Do you want to delete this BMI result history?</string>
+    <string name="delete_approved">Record has successfully deleted</string>
+    <string name="delete_denied">Deletion has been canceled</string>
 </resources>

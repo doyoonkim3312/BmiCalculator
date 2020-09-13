@@ -14,4 +14,12 @@
     <string name="save_result">결과 저장하기</string>
     <string name="bmi_result_save_positive">결과가 성공적으로 저장되었습니다.</string>
     <string name="go_to_list">결과 목록 보기</string>
+    <string name="result_summary">결과 요약</string>
+    <string name="result_tag">BMI 테스트 결과</string>
+    <string name="result_test_date">테스트 날짜</string>
+    <string name="delete_result">결과 삭제</string>
+    <string name="bmi_levle_history">BMI 수치</string>
+    <string name="delete_result_sure">결과를 삭제 하시겠습니까?</string>
+    <string name="delete_approved">결과가 성공적으로 삭제되었습니다.</string>
+    <string name="delete_denied">삭제가 취소되었습니다.</string>
 </resources>

@@ -69,8 +69,8 @@ class ResultActivity : AppCompatActivity() {
             newItem.bmiResult = resultTextView.text.toString()
             newItem.bmiLevel = bmi
             newItem.date = calendar.timeInMillis
-            //newItem.dataHeight = height
-            //newItem.dataWeight = weight
+            newItem.dataHeight = height
+            newItem.dataWeight = weight
 
             realm.commitTransaction()
 
